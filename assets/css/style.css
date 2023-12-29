@@ -1,0 +1,161 @@
+.container {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 95% 6%; 
+    grid-template-areas:
+    "menu"
+    "productos"
+    "footer";
+
+}
+.menu {
+    background-color: #EA906C;
+    grid-area: menu; 
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    color: #141155;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+.logo {
+    margin-top: 8px;
+    margin-left: 8px;
+    color: white;
+}
+.head{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 16px;
+    column-gap: 2rem;
+}
+.lista{
+    display: flex;
+    flex-direction: row;
+    padding-top: 25px;
+    justify-content: space-evenly;
+    column-gap: 2rem;
+}
+.lista a{
+    text-decoration: none;
+    color: #141155;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'EB Garamond', serif; 
+}
+
+.lista a:hover{
+    color:lavenderblush
+}
+.productos {
+    background-color: #EEE2DE;
+    grid-area: productos; 
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+.camaras{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer {
+    background-color: #B31312;
+    grid-area: footer; 
+}
+.tarjeta{
+    height: auto;
+    width: 236px;
+    filter: blur(2px) grayscale(100%);
+    transition: 2s;
+    padding-top: 23px;
+}
+.tarjeta:hover {
+    filter: blur(0) grayscale(0%);
+    transform: scale(1.1);
+}
+img{
+    height: 88%;
+    width: 88%;
+    border-radius: 10%;
+}
+.contacto{
+    display: flex;
+    flex-direction: column;
+    row-gap: 23px;
+    justify-content: center;
+    align-items: center;
+}
+.ayuda{
+    padding-top: 10px;
+}
+.redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.redes a{
+    padding-left: 35%;
+    color: black;
+}
+.ubicacion{
+    text-align: center;
+}
+.titulo{
+    font-size: 23px;
+}
+
+@media(min-width: 576px){
+    .container {
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-template-columns: 20% 80%; 
+        grid-template-rows: 75% 25%; 
+        grid-template-areas: 
+          "menu productos"
+          "footer productos"; 
+        height: 100vh;
+      }
+      .menu { 
+        grid-area: menu; 
+    }
+    .lista{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .lista a{
+        padding-top: 5%;
+        text-decoration: none;
+        color: black;
+    }
+    .footer { 
+        grid-area: footer; 
+        display: flex;
+        justify-content: center;
+    }
+    .productos{
+        grid-area: productos;
+    }
+    .camaras { 
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 6%;
+    }
+    .redes a{
+        padding-left: 23%;
+        color: black;
+    }
+    .ayuda{
+        text-align: center;
+    }
+}
